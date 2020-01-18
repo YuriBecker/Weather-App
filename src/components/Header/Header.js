@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Text } from '@chakra-ui/core';
+import PropTypes from 'prop-types';
 
 export default function Header({ city, country }) {
   return (
@@ -13,3 +14,8 @@ export default function Header({ city, country }) {
     </Flex>
   );
 }
+
+Header.propTypes = {
+  city: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+};

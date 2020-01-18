@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/core';
+import PropTypes from 'prop-types';
 import { capitalize } from '../../utils';
 
 export default function WeatherDesc({ children }) {
@@ -9,3 +10,7 @@ export default function WeatherDesc({ children }) {
     </Text>
   );
 }
+
+WeatherDesc.propTypes = {
+  children: PropTypes.node.isRequired,
+};

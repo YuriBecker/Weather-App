@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Text, Stack } from '@chakra-ui/core';
+import PropTypes from 'prop-types';
 
 export default function ShowTemps({ temp, maxTemp, minTemp }) {
   return (
@@ -29,3 +30,9 @@ export default function ShowTemps({ temp, maxTemp, minTemp }) {
     </Flex>
   );
 }
+
+ShowTemps.propTypes = {
+  temp: PropTypes.number.isRequired,
+  maxTemp: PropTypes.number.isRequired,
+  minTemp: PropTypes.number.isRequired,
+};

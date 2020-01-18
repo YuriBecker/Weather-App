@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Spinner, Stack, Flex } from '@chakra-ui/core';
 import { usePosition } from 'use-position';
-import { ThemeProvider, ErrorMessage, Header, WeatherDesc, ShowTemps } from '../../components';
+import {
+  ThemeProvider,
+  ErrorMessage,
+  Header,
+  WeatherDesc,
+  ShowTemps,
+  Icon,
+} from '../../components';
 import { getWeatherInfo, getWeatherIcon } from '../../utils';
-import Icon from '../../components/Icon/Icon';
 
 function App() {
   const { latitude, longitude, error } = usePosition(true, {

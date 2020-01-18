@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/core';
+import PropTypes from 'prop-types';
 
 function ErrorMessage({ children }) {
   return (
@@ -10,3 +11,7 @@ function ErrorMessage({ children }) {
 }
 
 export default ErrorMessage;
+
+ErrorMessage.propTypes = {
+  children: PropTypes.node.isRequired,
+};
