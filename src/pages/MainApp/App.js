@@ -12,9 +12,7 @@ import {
 import { getWeatherInfo, getWeatherIcon } from '../../utils';
 
 function App() {
-  const { latitude, longitude, error } = usePosition(true, {
-    enableHighAccuracy: true,
-  });
+  const { latitude, longitude, error } = usePosition(true);
   const [weatherInfo, setWeatherInfo] = useState(null);
   const [weatherIconUrl, setWeatherIconUrl] = useState(null);
 
